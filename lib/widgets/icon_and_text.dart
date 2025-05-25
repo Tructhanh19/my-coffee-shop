@@ -1,3 +1,4 @@
+import 'package:coffee_shop/utils/dimensions.dart';
 import 'package:coffee_shop/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,8 @@ class IconAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(icon, color: iconColor),
-        SizedBox(width: 5),
+        Icon(icon, color: iconColor, size: Dimensions.iconSize24),
+        SizedBox(width: Dimensions.width5),
         SmallText(text: text),
       ],
     );
