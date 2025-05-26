@@ -1,9 +1,12 @@
 import 'package:coffee_shop/pages/food/detail_popular_coffee.dart';
+import 'package:coffee_shop/pages/food/detail_recommended_coffee.dart';
 import 'package:coffee_shop/pages/home/main_coffee_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-void main() {
+import 'package:coffee_shop/helper/dependencies.dart' as dep;
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init();
   runApp(const MyApp());
 }
 
@@ -14,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      home: DetailPopularCoffee(),
+      home: DetailRecommededCoffee(),
       theme: ThemeData(primarySwatch: Colors.blue, fontFamily: 'Roboto'),
       debugShowCheckedModeBanner: false,
     );
